@@ -19,18 +19,19 @@ class PokemonListScreen extends StatelessWidget {
           slivers: <Widget>[
             SliverAppBar(
               automaticallyImplyLeading: true,
-              leading: SizedBox(),
               backgroundColor: Colors.transparent,
               brightness: Brightness.dark,
               floating: false,
-              flexibleSpace: Container(
+              title: Container(
                 padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   'Pokedex',
                   style: TextStyle(
-                      fontSize: getFontSize(context, 25),
-                      fontWeight: FontWeight.w700),
+                    color: Theme.of(context).textTheme.headline2!.color,
+                    fontSize: getFontSize(context, 25),
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),
