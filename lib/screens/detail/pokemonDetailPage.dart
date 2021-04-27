@@ -34,11 +34,11 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
 
   @override
   void initState() {
-    Future.delayed(Duration.zero, () async {
+    // Future.delayed(Duration.zero, () async {
       context
           .read<PokeDetailNotifier>()
           .loadDetailAndSpecies(widget.name.toLowerCase().split(' ')[0]);
-    });
+    // });
     super.initState();
   }
 

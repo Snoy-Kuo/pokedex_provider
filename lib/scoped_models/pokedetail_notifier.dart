@@ -58,11 +58,11 @@ class PokeDetailNotifier extends ChangeNotifier {
     });
   }
 
-  Future loadSpecies(String name) {
+  Future loadSpecies(String name) async{
     _isLoading = true;
     notifyListeners();
 
-    return repository.loadSpecies(name).then((loaded) {
+    return await repository.loadSpecies(name).then((loaded) {
       _pokemonSpecies = loaded;
       _isLoading = false;
       notifyListeners();
